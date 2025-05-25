@@ -1,42 +1,140 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* === VARIABLES === */
+:root {
+  --rojo-cinemark: #e50914;
+  --gris-fondo: #1a1a1a;
+  --blanco-texto: #ffffff;
+  --gris-suave: #2c2c2c;
+}
+
+/* === RESET GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gris-fondo);
+  color: var(--blanco-texto);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--rojo-cinemark);
+}
+
+.navbar-logo a {
+  color: var(--rojo-cinemark);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: var(--blanco-texto);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--rojo-cinemark);
+}
+
+/* === FOOTER === */
+.footer {
   text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: white;
+  font-size: 0.9rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* === HOME CONTAINER === */
+.home {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* === BÚSQUEDA === */
+.input-busqueda {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 1.5rem;
+  background-color: #333;
+  color: white;
 }
 
-.card {
-  padding: 2em;
+/* === GRID DE PELÍCULAS === */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
 }
 
-.read-the-docs {
-  color: #888;
+/* === TARJETAS DE PELÍCULAS === */
+.movie-card {
+  background-color: var(--gris-suave);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.movie-card img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #333;
+}
+
+.movie-card h3 {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.movie-card button {
+  margin: 0.5rem 1rem 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--rojo-cinemark);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.movie-card button:hover {
+  background-color: #b1060f;
 }

@@ -16,6 +16,7 @@ function NavBar() {
         <li><Link to="/teatros">Teatros</Link></li>
         <li><Link to="/cineclub">CineClub</Link></li>
         <li><Link to="/favoritos">Favoritos</Link></li>
+        <li><Link to="/Usuario">Usuario</Link></li>
 
       </ul>
       {usuario.logueado && (
