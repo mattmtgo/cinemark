@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { MovieContext } from '../contexto/movies/MovieContext';
+import './MovieCard.css'; // si lo tienes separado
 
 function MovieCard({ id, titulo, imagen, esFavorito = false }) {
   const { agregarAFavoritos, eliminarDeFavoritos } = useContext(MovieContext);
@@ -15,9 +16,9 @@ function MovieCard({ id, titulo, imagen, esFavorito = false }) {
   return (
     <div className="movie-card">
       <img src={imagen} alt={titulo} />
-      <div style={{ padding: '0.5rem' }}>
+      <div className="movie-info">
         <h3>{titulo}</h3>
-        <button onClick={handleClick} style={{ marginTop: '0.5rem' }}>
+        <button onClick={handleClick}>
           {esFavorito ? 'Quitar de Favoritos ❤️' : 'Agregar a Favoritos 🤍'}
         </button>
       </div>

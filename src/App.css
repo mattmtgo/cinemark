@@ -138,3 +138,42 @@ body {
 .movie-card button:hover {
   background-color: #b1060f;
 }
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card button {
+  margin-top: 0.5rem;
+  background-color: #c91f27;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.movie-card button:hover {
+  background-color: #a2161c;
+}
